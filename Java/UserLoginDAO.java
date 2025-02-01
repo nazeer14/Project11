@@ -11,7 +11,7 @@ public class UserLoginDAO
 		UserBean ub=null;
 		try {
 			Connection con=DBconnect.getcon();
-			PreparedStatement ps=con.prepareStatement("select * from registation where USERNAME=? and PASSWORD=?");
+			PreparedStatement ps=con.prepareStatement("select * from TableName where USERNAME=? and PASSWORD=?");
 			ps.setString(1, uname);
 			ps.setString(2, pwd);
 			
