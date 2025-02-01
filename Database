@@ -1,5 +1,9 @@
 Create Database 
-create table for Employee
+create table for TableName
 Column names are 
-(Emplyee Id, Employee First name, Employee Last name, Employee Address, employee phone number)
+(ID,Password, First name, Last name, Mail_Id, Phone number)
+
+Connect database
+Add server Tomcat 9.0
+Add External Jar file (Ojdbc11.jar)
 
