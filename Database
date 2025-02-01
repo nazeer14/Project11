@@ -1,0 +1,5 @@
+Create Database 
+create table for Employee
+Column names are 
+(Emplyee Id, Employee First name, Employee Last name, Employee Address, employee phone number)
+
