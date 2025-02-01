@@ -8,7 +8,7 @@ public class UpdateProfileDAO
 	
 	public int update(UserBean ub)
 	{
-		String query="update registation set FIRSTNAME=? , LASTNAME=?, MAIL_ID=?, PHONE=? where username=?";
+		String query="update TableName set FIRSTNAME=? , LASTNAME=?, MAIL_ID=?, PHONE=? where username=?";
 		int rc=0;
 		try {
 			Connection con=DBconnect.getcon();
