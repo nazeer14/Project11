@@ -10,7 +10,7 @@ public class UserRegisterDAO {
 		try
 		{
 			Connection con=DBconnect.getcon();
-			PreparedStatement ps=con.prepareStatement("insert into registation values(?,?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("insert into TableName values(?,?,?,?,?,?)");
 			System.out.println("Connection created");
 			ps.setString(1, ub.getUsername());
 			ps.setString(2, ub.getPassword());
