@@ -17,6 +17,7 @@
 	out.println("--------Profile Deatils--------<br><br>");
 	%>
 	<form id="form-1" action="update" method="post">
+		<input type="hidden" name="uname" value="<%=bean.getUsername()%>">
 		FirstName : <input type="text" name="ufname" value="<%=bean.getFirstname()%>"/><br><br>
 		LastName  : <input type="text" name="ulname" value="<%=bean.getLastname() %>"/><br><br>
 		Mail_Id   : <input type="text" name="umail" value="<%=bean.getMail_id() %>"/><br><br>
