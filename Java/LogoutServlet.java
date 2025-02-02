@@ -16,13 +16,8 @@ public class LogoutServlet extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
 	{
-		HttpSession session=req.getSession(false);
-		//session.removeAttribute("abean");
-		//req.removeAttribute("aname");
-		session.invalidate();
-		//res.sendRedirect("admin.html");
 			req.setAttribute("msg", "Session experied!!");
-			RequestDispatcher rd=req.getRequestDispatcher("index.html");
+			RequestDispatcher rd=req.getRequestDispatcher("logout.jsp");
 			rd.forward(req, res);
 		
 	}
