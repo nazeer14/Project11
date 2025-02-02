@@ -7,7 +7,7 @@
 <title>Error</title>
 </head>
 <body>
-<h1>Login Failed! Please try again.</h1>
+<h1>error! Please try again.</h1>
     <a href="index.html">Go back to Login</a>
 
 </body>
