@@ -15,26 +15,25 @@ public class UpdateProfileServlet extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException
 	{
-		String fname=req.getParameter("ufname");
-		String lname=req.getParameter("ulname");
-		String mail=req.getParameter("umail");
-		String phone=req.getParameter("uphone");
 		
 		UserBean ub=new UserBean();
-		ub.setFirstname(fname);
-		ub.setLastname(lname);
-		ub.setMail_id(mail);
-		ub.setPhone(phone);
+		ub.setUsername(req.getParameter("uname"));
+		ub.setFirstname(req.getParameter("ufname"));
+		ub.setLastname(req.getParameter("ulname"));
+		ub.setMail_id(req.getParameter("umail"));
+		ub.setPhone(req.getParameter("uphone"));
 		
 		UpdateProfileDAO upd=new UpdateProfileDAO();
 		int rowCount=upd.update(ub);
 		if(rowCount==0)
 		{
 			req.setAttribute("msg", "Data not Updated");
-			res.sendRedirect("Register.jsp");			
+			RequestDispatcher rd=req.getRequestDispatcher("update.jsp");
+			rd.forward(req, res);		
 		}
 		else
 		{
+			req.setAttribute("msg", "User details Updated Successfully.");
 			RequestDispatcher rd=req.getRequestDispatcher("update.jsp");
 			rd.forward(req, res);
 		}
